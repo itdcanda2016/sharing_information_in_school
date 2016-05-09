@@ -1,0 +1,8 @@
+.jumbotron {
+  position: relative;
+  background: url("../image/img.jpg") no-repeat center center;
+  width:100%;
+  height: 100%;
+  background-size: 100% 100%;
+  padding-top: 400px;
+}
