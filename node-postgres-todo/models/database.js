@@ -1,4 +1,5 @@
 var pg = require('pg');
+var path = require('path');
 var connectionString = process.env.DATABASE_URL || 'postgres://postgres:postgres@localhost:5432/todo';
 
 var client = new pg.Client(connectionString);
