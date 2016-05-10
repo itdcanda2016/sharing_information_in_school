@@ -5,6 +5,11 @@ var pg = require('pg');
 // [todo]: make sure about variable
 var connectionString = require(path.join(__dirname, '../', './', 'config'));
 
+// Route
+router.get('/', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '../views', 'index.html'));
+});
+
 // CREATE
 router.post('/api/v1/todos', function(req, res) {
   var results = [];
