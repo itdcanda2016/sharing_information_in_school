@@ -1,0 +1,88 @@
+body {
+	background-color: #EEEEF2;
+	overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Lora', serif;
+	font-weight: bold;
+}
+h2 {
+	font-size: 3em;
+	margin: 2em 0 1em;
+}
+.center {
+	width: 165px;
+	margin: 0 auto;
+}
+.navbar-default {
+	background-color: #fff;
+	padding: 1em;
+}
+.jumbotron {
+	background: url(../img/main_1.jpg) center top no-repeat;
+	background-size: cover;
+	padding: 18em 0 16em;
+	color: #fff;
+}
+.media {
+	background-color: #fff;
+	padding: 2em 1.5em;
+	box-shadow: 2px 2px 1px #ccc;
+}
+.media-object {
+	border: 2px solid #000;
+}
+.media-body h3 {
+	margin-top: 0;
+}
+.media-left {
+	padding-right: 1em;
+}
+.pagination>li>a {
+	color: #080808;
+}
+
+
+.each-course {
+	margin-bottom: 2em;
+}
+.each-course p {
+	width: 60%;
+	margin: 0 auto;
+}
+
+
+
+.each-project {
+	margin-bottom: 2em;
+}
+.each-project .description {
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+footer {
+	background-color: #252525;
+	padding: 1.5em 0;
+	margin-top: 10em;
+	color: #fff;
+}
+.fnavi {
+	float: left;
+}
+.fnavi li {
+	list-style: none;
+	float: left;
+	margin-right: 2em;
+}
+.fnavi li a {
+	color: #fff;
+}
+ul.clearfix {
+	padding: 0;
+}
+.copyright {
+	display: block;
+	font-size: 0.9em;
+}
