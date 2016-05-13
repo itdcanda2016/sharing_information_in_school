@@ -1,6 +1,10 @@
+html{
+	overflow: hidden;
+}
 body {
 	background-color: #EEEEF2;
 	overflow-x: hidden;
+	overflow-y: hidden;
 }
 .clear {
 	clear: both;
