@@ -6,12 +6,12 @@ body {
 	clear: both;
 }
 h1,h2,h3,h4,h5,h6 {
-	font-family: 'Lora', serif;
+	font-family: 'Playfair Display', serif;
 	font-weight: bold;
 }
 
 h2 {
-	color: #006515;
+	color: #696969;
 	font-size: 2em;
 	margin: 1.5em 0 1em;
 }
@@ -52,7 +52,7 @@ h2 {
 	color: #fff;
 }
 .jumbotron p {
-	font-family: 'Lora', serif;
+	font-family: 'Playfair Display', serif;
 	font-size: 1em;
 }
 
@@ -244,7 +244,7 @@ footer {
 
 /* Main Title */
 	.jumbotron p {
-		font-family: 'Lora', serif;
+		font-family: 'Playfair Display', serif;
 		font-size: 1.5em;
 	}
 
@@ -260,5 +260,12 @@ footer {
 	    width: 30%;
 	}
 
+
+  }
+
+  @media (max-width: 768px) { 
+	.jumbotron {
+	padding: 12em 0 8em;
+}	
 
   }
