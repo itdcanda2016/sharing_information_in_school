@@ -2,6 +2,10 @@ body {
 	background-color: #EEEEF2;
 	overflow-x: hidden;
 }
+.pagination,
+.container {
+	width: 100%;
+}
 .clear {
 	clear: both;
 }
