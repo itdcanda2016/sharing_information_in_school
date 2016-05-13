@@ -2,28 +2,63 @@ body {
 	background-color: #EEEEF2;
 	overflow-x: hidden;
 }
+.clear {
+	clear: both;
+}
 h1,h2,h3,h4,h5,h6 {
 	font-family: 'Lora', serif;
 	font-weight: bold;
 }
+
 h2 {
-	font-size: 3em;
-	margin: 2em 0 1em;
+	color: #006515;
+	font-size: 2em;
+	margin: 1.5em 0 1em;
 }
-.center {
-	width: 165px;
-	margin: 0 auto;
-}
+
+/* Navigation */
 .navbar-default {
 	background-color: #fff;
-	padding: 1em;
+	padding: 0.3em;
 }
+
+.navbar-nav>li>a {
+	text-align: center;
+}
+
+.nav .btn {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+}
+.nav .btn-default {
+    color: #006515;
+    font-weight: bold;
+    background-color: #fff;
+    border: none;    
+}
+.nav .btn-default:hover {
+    color: #006515;
+    background-color: #fff;
+    border: none;
+}
+
+
+/* Main Image */
 .jumbotron {
-	background: url(../img/main_1.jpg) center top no-repeat;
+	background: url(../img/main.jpg) center top no-repeat;
 	background-size: cover;
 	padding: 18em 0 16em;
 	color: #fff;
 }
+.jumbotron p {
+	font-family: 'Lora', serif;
+	font-size: 1em;
+}
+
+
+
+/* New Posts */
 .media {
 	background-color: #fff;
 	padding: 2em 1.5em;
@@ -41,18 +76,55 @@ h2 {
 .pagination>li>a {
 	color: #080808;
 }
+.center {
+	width: 165px;
+	margin: 0 auto;
+}
 
 
+/* School Information */
+#school-information {
+	background-color: #2f4f4f;
+	color: #fff;
+	padding-bottom: 3em;
+	margin-top: 4em;
+}
+#school-information h2 {
+	color: #fff;
+}
+#school-information button {
+	width: 50%;
+	float: right;
+	background-color: #2f4f4f;
+    border: 3px solid #fff;
+    border-radius: 3px;
+    color: #fff;
+}
+#school-information button:hover {
+	text-decoration: none;
+    background-color: #fff;
+    color: #2f4f4f;
+
+}
+
+
+
+/* Courses */
+#courses {
+	background-color: #fff;
+	padding-bottom: 3em;
+}
 .each-course {
 	margin-bottom: 2em;
 }
 .each-course p {
-	width: 60%;
+	width: 70%;
 	margin: 0 auto;
 }
 
 
 
+/* Your Projects */
 .each-project {
 	margin-bottom: 2em;
 }
@@ -60,29 +132,133 @@ h2 {
 	width: 80%;
 	margin: 0 auto;
 }
+.each-project .title {
+	font-size: 1.5em;
+	margin-bottom: 0;
+}
+
+.btn-default {
+    color: #fff;
+    background-color: #006515;
+    border: 2px solid #006515;
+}
+.btn-default:hover {
+    color: #006515;
+    background-color: #fff;
+    border: 2px solid #006515;
+}
 
 
+
+
+
+/* Pagination */
+.pager {
+	margin: 0;
+}
+.pager li>a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 3px solid #006515;
+    border-radius: 3px;
+    color: #006515;
+    width: 45%;
+    font-weight: bold;
+}
+.pager li>a:hover {
+    text-decoration: none;
+    background-color: #006515;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+/* Footer */
 footer {
 	background-color: #252525;
-	padding: 1.5em 0;
-	margin-top: 10em;
+	padding: 1.8em 0 1em;
+	margin-top: 5em;
 	color: #fff;
 }
+
 .fnavi {
-	float: left;
+    text-align: center;
+}
+.fnavi ul {
+    display: inline-block;
+    padding: 0;
 }
 .fnavi li {
-	list-style: none;
-	float: left;
-	margin-right: 2em;
+    float: left;
+    list-style: none;
+	font-size: .8em;
+}
+.fnavi li + li {
+    margin-left:20px;
 }
 .fnavi li a {
 	color: #fff;
 }
-ul.clearfix {
-	padding: 0;
+.fnavi li a:hover {
+	text-decoration: none;
 }
+
 .copyright {
 	display: block;
-	font-size: 0.9em;
+	font-size: 0.6em;
 }
+
+
+
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+	h2 {
+		font-size: 3em;
+	}
+/* Navigation */
+	.nav .btn {
+		display: inline;
+		width: auto;
+		margin: 8px 0;
+	}
+	.nav .btn-default {
+	    color: #006515;
+	    background-color: #fff;
+	    border: 2px solid #006515;
+	}
+	.nav .btn-default:hover {
+	    color: #006515;
+	    background-color: #fff;
+	    border: 2px solid #006515;
+	}
+
+/* Main Title */
+	.jumbotron p {
+		font-family: 'Lora', serif;
+		font-size: 1.5em;
+	}
+
+
+
+ }
+
+
+
+
+ @media (min-width: 992px) { 
+	.pager li>a {
+	    width: 30%;
+	}
+
+
+  }
