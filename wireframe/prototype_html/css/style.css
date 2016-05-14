@@ -1,6 +1,10 @@
 body {
 	background-color: #EEEEF2;
 	overflow-x: hidden;
+	width: 100%;
+}
+.wrapper {
+	overflow: hidden;
 }
 
 .clear {
