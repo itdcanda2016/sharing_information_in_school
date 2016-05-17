@@ -132,7 +132,7 @@ h1 {
    School Information
 -------------------------------------------------- */
 #school-information {
-	background: radial-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../img/sample.jpg) center top no-repeat;
+	background: radial-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/sample.jpg) center top no-repeat;
 	background-size: cover;
 	color: #fff;
 	padding: 1em 0 4em;
