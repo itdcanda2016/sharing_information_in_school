@@ -1,69 +1,105 @@
+
+/* --------------------------------------------------
+   Common
+-------------------------------------------------- */
 body {
 	background-color: #EEEEF2;
 	overflow-x: hidden;
 	width: 100%;
+	color: #606060;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
 }
 .wrapper {
 	overflow: hidden;
 }
-
 .clear {
 	clear: both;
 }
-h1,h2,h3,h4,h5,h6 {
-	font-family: 'Playfair Display', serif;
-	font-weight: bold;
+a {
+	color: #606060;
 }
-
+a:focus, a:hover {
+    color: #01440f;
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Roboto', sans-serif;	
+	font-weight: 900;
+	color: #606060;
+}
 h2 {
-	color: #696969;
+	color: #606060;
 	font-size: 2em;
 	margin: 1.5em 0 1em;
 }
+.btn-default {
+    color: #fff;
+    background-color: #01440f;
+    border: 2px solid #01440f;
+}
+.btn-default:hover {
+    color: #006515;
+    background-color: #fff;
+    border: 2px solid #01440f;
+}
 
+
+/* --------------------------------------------------
+   Header
+-------------------------------------------------- */
 /* Navigation */
 .navbar-default {
 	background-color: #fff;
-	padding: 0.3em;
+	padding: 0.3em 0;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
 }
-
 .navbar-nav>li>a {
 	text-align: center;
+	font-weight: bold;
 }
-
+.navbar-default .navbar-nav>li>a:hover {
+	color: #01440f;
+}
 .nav .btn {
 	display: block;
 	width: 50%;
 	margin: 0 auto;
 }
 .nav .btn-default {
-    color: #006515;
+    color: #01440f;
     font-weight: bold;
     background-color: #fff;
     border: none;    
 }
 .nav .btn-default:hover {
-    color: #006515;
+    color: #01440f;
     background-color: #fff;
     border: none;
 }
 
 
 /* Main Image */
+h1 {
+	font-size: 3.5em;
+}
 .jumbotron {
-	background: url(../img/main.jpg) center top no-repeat;
+	background: radial-gradient(rgba(1,68,15,0.8),rgba(1,68,15,0.8)), url(../img/sample.jpg) center top no-repeat;
 	background-size: cover;
-	padding: 18em 0 16em;
+	padding: 12em 0 8em;
 	color: #fff;
-}
+}	
 .jumbotron p {
-	font-family: 'Playfair Display', serif;
-	font-size: 1em;
+	font-family: 'Roboto', sans-serif;	
+	font-weight: 100;	
+	font-size: 1.6em;
 }
 
 
 
-/* New Posts */
+/* --------------------------------------------------
+   New Posts
+-------------------------------------------------- */
 .media {
 	background-color: #fff;
 	padding: 2em 1.5em;
@@ -80,27 +116,36 @@ h2 {
 }
 .pagination>li>a {
 	color: #080808;
+	padding: 10px 20px;
+}
+.pagination>li>a:focus, .pagination>li>a:hover {
+	color: #01440f;
 }
 .center {
-	width: 165px;
+	width: 250px;
 	margin: 0 auto;
 }
 
 
-/* School Information */
+
+/* --------------------------------------------------
+   School Information
+-------------------------------------------------- */
 #school-information {
-	background-color: #2f4f4f;
+	background: radial-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../img/sample.jpg) center top no-repeat;
+	background-size: cover;
 	color: #fff;
-	padding-bottom: 3em;
+	padding: 1em 0 4em;
 	margin-top: 4em;
 }
-#school-information h2 {
+#school-information h2,
+#school-information h3 {
 	color: #fff;
 }
 #school-information button {
 	width: 50%;
 	float: right;
-	background-color: #2f4f4f;
+	background-color: #01440f;
     border: 3px solid #fff;
     border-radius: 3px;
     color: #fff;
@@ -108,13 +153,20 @@ h2 {
 #school-information button:hover {
 	text-decoration: none;
     background-color: #fff;
-    color: #2f4f4f;
+    color: #01440f;
 
+}
+.each-information {
+   border-left: 5px solid #01440f;
+   padding-left: 1em;
 }
 
 
 
-/* Courses */
+
+/* --------------------------------------------------
+   Courses
+-------------------------------------------------- */
 #courses {
 	background-color: #fff;
 	padding-bottom: 3em;
@@ -129,7 +181,9 @@ h2 {
 
 
 
-/* Your Projects */
+/* --------------------------------------------------
+   Your Projects
+-------------------------------------------------- */
 .each-project {
 	margin-bottom: 2em;
 }
@@ -142,20 +196,6 @@ h2 {
 	margin-bottom: 0;
 }
 
-.btn-default {
-    color: #fff;
-    background-color: #006515;
-    border: 2px solid #006515;
-}
-.btn-default:hover {
-    color: #006515;
-    background-color: #fff;
-    border: 2px solid #006515;
-}
-
-
-
-
 
 /* Pagination */
 .pager {
@@ -165,33 +205,29 @@ h2 {
     display: inline-block;
     padding: 10px 20px;
     background-color: #fff;
-    border: 3px solid #006515;
+    border: 3px solid #01440f;
     border-radius: 3px;
-    color: #006515;
+    color: #01440f;
     width: 45%;
     font-weight: bold;
 }
 .pager li>a:hover {
     text-decoration: none;
-    background-color: #006515;
+    background-color: #01440f;
     color: #fff;
 }
 
 
 
-
-
-
-
-
-/* Footer */
+/* --------------------------------------------------
+   Footer
+-------------------------------------------------- */
 footer {
 	background-color: #252525;
 	padding: 1.8em 0 1em;
 	margin-top: 5em;
 	color: #fff;
 }
-
 .fnavi {
     text-align: center;
 }
@@ -205,15 +241,15 @@ footer {
 	font-size: .8em;
 }
 .fnavi li + li {
-    margin-left:20px;
+    margin-left: 20px;
 }
 .fnavi li a {
 	color: #fff;
 }
 .fnavi li a:hover {
+	color: #606060;
 	text-decoration: none;
 }
-
 .copyright {
 	display: block;
 	font-size: 0.6em;
@@ -221,16 +257,17 @@ footer {
 
 
 
-
-
-
-/* Small devices (tablets, 768px and up) */
+/* --------------------------------------------------
+   768px and up
+-------------------------------------------------- */
 @media (min-width: 768px) { 
-
 	h2 {
 		font-size: 3em;
 	}
-/* Navigation */
+	/* Navigation */
+	.navbar-default {
+		padding: 1.2em 0;
+	}
 	.nav .btn {
 		display: inline;
 		width: auto;
@@ -239,38 +276,42 @@ footer {
 	.nav .btn-default {
 	    color: #006515;
 	    background-color: #fff;
-	    border: 2px solid #006515;
+	    border: 2px solid #01440f;
 	}
 	.nav .btn-default:hover {
-	    color: #006515;
-	    background-color: #fff;
-	    border: 2px solid #006515;
+	    color: #fff;
+	    background-color: #01440f;
+	    border: 2px solid #01440f;
 	}
+	.navbar-nav>li:nth-child(4) {
+		padding-right: 1em;
+	}
+	/* Main Title */
+	.jumbotron {
+		padding: 18em 0 15em;
 
-/* Main Title */
+	}
+	.jumbotron h1 {
+    	font-size: 5.8em;
+    	letter-spacing: 0.05em;
+	}
 	.jumbotron p {
-		font-family: 'Playfair Display', serif;
-		font-size: 1.5em;
+		font-family: 'Roboto', sans-serif;	
+		font-weight: 100;
+		font-size: 2em;
+		letter-spacing: 0.05em;
 	}
-
-
-
  }
 
 
 
-
+/* --------------------------------------------------
+   992px and up
+-------------------------------------------------- */
  @media (min-width: 992px) { 
 	.pager li>a {
 	    width: 30%;
 	}
-
-
   }
 
-  @media (max-width: 768px) { 
-	.jumbotron {
-	padding: 12em 0 8em;
-}	
 
-  }
