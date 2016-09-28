@@ -16,6 +16,11 @@ body {
 .clear {
 	clear: both;
 }
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
 a {
 	color: #606060;
 }
@@ -30,32 +35,54 @@ h1,h2,h3,h4,h5,h6 {
 }
 h2 {
 	color: #606060;
-	font-size: 2em;
 	margin: 1.5em 0 1em;
 }
+h2:before {
+	content: "";
+	display: block;
+	margin: 0 auto;
+	width: 30%;
+	height: 2px;
+	margin-bottom: 20px;
+	background-color: #01440f;
+}
 .btn-default {
-    color: #fff;
-    background-color: #01440f;
-    border: 2px solid #01440f;
+    color: #01440f;
+    font-weight: bold;
+    border-color: white;
+    /*background-color: #01440f;
+    border: 1px solid #01440f;*/
 }
 .btn-default:hover {
     color: #006515;
     background-color: #fff;
-    border: 2px solid #01440f;
+    border: 1px solid #01440f;
 }
-
 
 /* --------------------------------------------------
    Header
 -------------------------------------------------- */
-.navbar-brand {
-	padding-right: 50px;
+a.navbar-brand{
+	display: block;
+	padding: 0;
 }
+a.navbar-brand img {
+	width: 40px;
+	height: 40px;
+	margin-top: 5px;
+	margin-left: 15px;
+}
+
 /* Navigation */
 .navbar-default {
 	background-color: #fff;
-	padding: 0.3em 0;
+	padding: 0.85em 0 0.45em;
 	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+}
+.navbar-nav li {
+	border-bottom: 1px solid #ccc;
+	width: 90%;
+	margin: 0 auto;
 }
 .navbar-nav>li>a {
 	text-align: center;
@@ -70,9 +97,9 @@ h2 {
 	margin: 0 auto;
 }
 .nav .btn-default {
-    color: #01440f;
+    color: #fff;
     font-weight: bold;
-    background-color: #fff;
+    background-color: #01440f;
     border: none;    
 }
 .nav .btn-default:hover {
@@ -85,14 +112,16 @@ h2 {
 }
 .navbar-right {
     margin-right: 0;
+    text-align: center;
 }
-
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #fff;
+}
 
 /* Main Image */
-h1 {
-	font-size: 3.5em;
-	padding-top: 50px;
-}
 .jumbotron {
 	background: radial-gradient(rgba(1,68,15,0.8),rgba(1,68,15,0.8)), url(../img/sample.jpg) center top no-repeat;
 	background-size: cover;
@@ -104,14 +133,15 @@ h1 {
 .jumbotron p {
 	font-family: 'Roboto', sans-serif;	
 	font-weight: 100;	
-	font-size: 1.6em;
+	font-size: 1.4em;
 }
 .position-center {
 	position: absolute;
-	top: 50%;
+	width: 85%;
+	top: 55%;
 	left: 50%;
 	-webkit-transform: translate(-50%,-50%);
-	transform: translateY(-50%,-50%);
+	transform: translate(-50%,-50%);
 }
 
 
@@ -120,18 +150,36 @@ h1 {
    New Posts
 -------------------------------------------------- */
 .media {
-	background-color: #fff;
-	padding: 2em 1.5em;
-	box-shadow: 2px 2px 1px #ccc;
+	width: 100%;
+	margin: 0 auto;
+	padding: 3em 0;
+	border-bottom: 1px solid #ccc;
 }
+.media:last-child{
+	border-bottom: 0px;
+}
+.media-body, .media-left, .media-right {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.post-box {
+	background-color: #fff;
+	padding: 0 2.5em;
+}
+
 .media-object {
+	display: inline-block;
 	border: 2px solid #000;
+	margin-bottom: 20px;
+	width: 70px;
+	height: 70px;
 }
 .media-body h3 {
 	margin-top: 0;
 }
 .media-left {
-	padding-right: 1em;
+	padding-right: 0;
 }
 .pagination>li>a {
 	color: #080808;
@@ -151,23 +199,20 @@ h1 {
    School Information
 -------------------------------------------------- */
 #school-information {
-	background: radial-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/sample.jpg) center top no-repeat;
-	background-size: cover;
 	color: #fff;
-	padding: 1em 0 4em;
-	margin-top: 4em;
 }
-#school-information h2,
 #school-information h3 {
 	color: #fff;
+	margin-top: 0;
 }
 #school-information button {
 	width: 50%;
 	float: right;
 	background-color: #01440f;
-    border: 3px solid #fff;
+    border: 1px solid #fff;
     border-radius: 3px;
     color: #fff;
+    margin: 0;
 }
 #school-information button:hover {
 	text-decoration: none;
@@ -176,8 +221,10 @@ h1 {
 
 }
 .each-information {
-   border-left: 5px solid #01440f;
-   padding-left: 1em;
+	width: 100%;
+	background: radial-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/sample.jpg) center top no-repeat;
+	background-size: cover;
+	padding: 4em;
 }
 
 
@@ -224,7 +271,7 @@ h1 {
     display: inline-block;
     padding: 10px 20px;
     background-color: #fff;
-    border: 3px solid #01440f;
+    border: 2px solid #01440f;
     border-radius: 3px;
     color: #01440f;
     width: 45%;
@@ -285,7 +332,24 @@ footer {
 	}
 	/* Navigation */
 	.navbar-default {
-		padding: 1.2em 0;
+		background-color: #fff;
+		padding: 0.75em 0;
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+	}
+	.navbar-nav li {
+		border-bottom: none;
+		width: auto;
+		margin: 0 auto;
+	}
+	.navbar-nav li:first-child {
+		margin-left: 50px;
+	}
+	.navbar-nav>li>a {
+		text-align: center;
+		font-weight: bold;
+	}
+	.navbar-default .navbar-nav>li>a:hover {
+		color: #01440f;
 	}
 	.nav .btn {
 		display: inline;
@@ -320,6 +384,33 @@ footer {
 		font-size: 2em;
 		letter-spacing: 0.05em;
 	}
+	/* --------------------------------------------------
+   New Posts
+-------------------------------------------------- */
+
+.media-left {
+    display: block;
+    width: 10%;
+    text-align: center;
+    float: left;
+
+}
+.media-body {
+	width: 90%;
+	float: right;
+	text-align: left;
+	padding-left: 30px;
+}
+
+.each-information {
+	width: 50%;
+	background: radial-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/sample.jpg) center top no-repeat;
+	background-size: cover;
+	padding: 7em 4em 7em -10em;
+	float: left;
+}
+
+
  }
 
 
